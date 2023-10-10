@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-body-color: #ffffff;
+  --bg-button-color: #e1e1e6;
+  --bg-button-focus-color: #02799d;
+
+  --text-font-color: #323238;
+  --text-font-focus-color: #ffffff;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  font-size: 1.6rem;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  background: var(--bg-body-color);
+}
+
+#tempo {
+  font-size: 12.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--text-font-color);
+  text-align: center;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10rem;
+  align-items: center;
+}
+
+#botoes {
+  grid-column: 1;
+  gap: 4rem;
+  place-content: center;
+}
+
+#botoes button {
+  background: none;
+  border: none;
+  font-size: 6rem;
+  color: var(--text-font-color);
+  cursor: pointer;
+}
+
+#botoes-sonoros {
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+#botoes-sonoros .ph-tree {
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: end;
+  background-color: var(--bg-button-color);
+  color: var(--text-font-color);
+}
+
+.floresta #botoes-sonoros .ph-tree {
+  background-color: var(--bg-button-focus-color);
+  color: var(--text-font-focus-color);
+}
+
+#botoes-sonoros .ph-cloud-rain {
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: start;
+  background-color: var(--bg-button-color);
+  color: var(--text-font-color);
+}
+
+.chuva #botoes-sonoros .ph-cloud-rain {
+  background-color: var(--bg-button-focus-color);
+  color: var(--text-font-focus-color);
+}
+
+#botoes-sonoros .ph-storefront {
+  grid-area: 2 / 1 / 3 / 2;
+  justify-self: end;
+  background-color: var(--bg-button-color);
+  color: var(--text-font-color);
+}
+
+.cafeteria #botoes-sonoros .ph-storefront {
+  background-color: var(--bg-button-focus-color);
+  color: var(--text-font-focus-color);
+}
+
+#botoes-sonoros .ph-fire {
+  grid-area: 2 / 2 / 3 / 3;
+  justify-self: start;
+  background-color: var(--bg-button-color);
+  color: var(--text-font-color);
+}
+
+.lareira #botoes-sonoros .ph-fire {
+  background-color: var(--bg-button-focus-color);
+  color: var(--text-font-focus-color);
+}
+
+#botoes-sonoros button {
+  border: none;
+  width: 13rem;
+  height: 15rem;
+  font-size: 7rem;
+  border-radius: 2.4rem;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+#botoes-sonoros button:hover {
+  transform: scale(1.05);
+}
+
+.rodando .ph-play-circle,
+html:not(.rodando) .ph-pause-circle {
+  display: none;
+}
